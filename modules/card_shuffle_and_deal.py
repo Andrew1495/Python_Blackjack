@@ -30,3 +30,9 @@ def hitting(deck,upper_range,hand):
 
 def upper_range(deck):
     return len(deck)
+
+def shuffle_deck(list_cards):
+    new_deck = list_cards
+    return new_deck
+
+
