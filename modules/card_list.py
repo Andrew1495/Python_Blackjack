@@ -1,7 +1,7 @@
 cards = [
     {
     "name": "Ace of Spades",
-    "value": "ace"
+    "value": 11
     },
     {
     "name": "Two of Spades",
@@ -53,7 +53,7 @@ cards = [
     },
         {
     "name": "Ace of Clubs",
-    "value": "ace"
+    "value": 11
     },
     {
     "name": "Two of Clubs",
@@ -105,7 +105,7 @@ cards = [
     },
     {
     "name": "Ace of Diamonds",
-    "value": "ace"
+    "value": 11
     },
     {
     "name": "Two of Diamonds",
@@ -157,7 +157,7 @@ cards = [
     },
     {
     "name": "Ace of Hearts",
-    "value": "ace"
+    "value": 11
     },
     {
     "name": "Two of Hearts",

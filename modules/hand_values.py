@@ -4,7 +4,12 @@ def hand_value(hand,has_ace):
         for card in hand:
             total += card["value"]
             return total
-
+    elif ace_in_hand == True:
+        for card in hand:
+            total += card["value"]
+        if total > 21:
+            total -= 10
+        return total
 
     return total
 
