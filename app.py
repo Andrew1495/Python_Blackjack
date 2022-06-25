@@ -43,6 +43,9 @@ print("\n")
 hit_or_stick = input("Would you like to hit or stick? \nhit/stick\n".lower())
 while hit_or_stick != "hit" and hit_or_stick != "stick":
     hit_or_stick = input("Would you like to hit or stick? \nhit/stick\n".lower())
+
+if hit_or_stick == "hit":
+    
 # print(player_hand,computer_hand,upper_range)
 
 # player_has_ace = does_hand_ace(player_hand)
