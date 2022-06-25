@@ -25,7 +25,13 @@ def does_hand_ace(hand):
 
 def compare_hands(player_hand_total, computer_hand_total):
     winner = None
-    if player_hand_total > computer_hand_total and player_hand_total <= 21:
+    if player_hand_total >21:
+        winner = "computer"
+        return winner
+    elif computer_hand_total > 21:
+        winner = player
+        return winner
+    elif player_hand_total > computer_hand_total and player_hand_total <= 21:
         winner = "player"
         return winner
     elif player_hand_total < computer_hand_total and computer_hand_total <=21:
@@ -35,3 +41,4 @@ def compare_hands(player_hand_total, computer_hand_total):
         winner = "draw"
         return winner
     
+

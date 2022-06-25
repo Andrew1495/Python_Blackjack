@@ -13,7 +13,7 @@ def dealing_hand(deck, upper_range):
         deck.pop(picking_card)
         upper_range -= 1
         counter -= 1
-    return  hand
+    return hand
 
 
 # will append a new card into current hand
@@ -34,5 +34,4 @@ def size_of_deck(deck):
 def shuffle_deck(list_cards):
     new_deck = list_cards
     return new_deck
-
 
