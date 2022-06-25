@@ -16,8 +16,17 @@ def dealing_hand(deck, upper_range):
     return  hand
 
 
+# will append a new card into current hand
+# upper_range must be modified to make sure there are no repeats
+
 def hitting(deck,upper_range,hand):
     picking_card = random.randint(0, upper_range)
     hand.append(deck[picking_card])
     deck.pop(picking_card)
     
+
+# function allows the top range of the deck to be change after each card is taken out
+# it might be better to use range but for now this will work
+
+def upper_range(deck):
+    return len(deck)
