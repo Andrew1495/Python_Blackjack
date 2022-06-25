@@ -1,8 +1,10 @@
 def hand_value(hand,has_ace):
     total = 0
-    for card in hand:
-        total += card["value"]
-        return total
+    if ace_in_hand == False:
+        for card in hand:
+            total += card["value"]
+            return total
+
 
     return total
 
