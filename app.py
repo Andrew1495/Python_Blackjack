@@ -29,7 +29,7 @@ if player_hand_value == 21 and computer_hand_value == 21:
     print("You both have blackjack, its a draw")
     quit()
 elif player_hand_value == 21:
-    Print("You have blackjack, you win!")
+    print("You have blackjack, you win!")
     quit()
 elif computer_hand_value == 21:
     print("Unlucky, The dealer has blackjack, you lose")
@@ -44,8 +44,26 @@ hit_or_stick = input("Would you like to hit or stick? \nhit/stick\n".lower())
 while hit_or_stick != "hit" and hit_or_stick != "stick":
     hit_or_stick = input("Would you like to hit or stick? \nhit/stick\n".lower())
 
-if hit_or_stick == "hit":
-    
+while hit_or_stick != "stick" and player_hand_value <= 21:
+    print("\n")
+    print("\n")
+    hitting(deck, upper_range, player_hand)
+    upper_range = size_of_deck(deck)
+    player_has_ace = does_hand_ace(player_hand)
+    player_hand_value = hand_value(player_hand, player_has_ace)
+    print("Your hand is now:")
+    for cards in player_hand:
+        print(cards["name"])
+    print(f"your hand is valued at: {player_hand_value}")
+    if player_hand_value > 21:
+        print("you went bust")
+    else:
+        hit_or_stick = input("Would you like to hit or stick? \nhit/stick\n".lower())
+
+if player_hand_value > 21:
+    print("you went bust")
+
+
 # print(player_hand,computer_hand,upper_range)
 
 # player_has_ace = does_hand_ace(player_hand)
