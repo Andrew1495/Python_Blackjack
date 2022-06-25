@@ -1,10 +1,10 @@
 def hand_value(hand,has_ace):
     total = 0
-    if ace_in_hand == False:
+    if has_ace == False:
         for card in hand:
             total += card["value"]
-            return total
-    elif ace_in_hand == True:
+        return total
+    elif has_ace == True:
         for card in hand:
             total += card["value"]
         if total > 21:
@@ -21,3 +21,17 @@ def does_hand_ace(hand):
             return False
 
 
+
+
+def compare_hands(player_hand_total, computer_hand_total):
+    winner = None
+    if player_hand_total > computer_hand_total and player_hand_total <= 21:
+        winner = "player"
+        return winner
+    elif player_hand_total < computer_hand_total and computer_hand_total <=21:
+        winner = "computer"
+        return winner
+    elif player_hand_total == computer_hand_total:
+        winner = "draw"
+        return winner
+    

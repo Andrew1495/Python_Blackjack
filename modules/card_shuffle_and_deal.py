@@ -28,7 +28,7 @@ def hitting(deck,upper_range,hand):
 # function allows the top range of the deck to be change after each card is taken out
 # it might be better to use range but for now this will work
 
-def upper_range(deck):
+def size_of_deck(deck):
     return len(deck) -1
 
 def shuffle_deck(list_cards):
