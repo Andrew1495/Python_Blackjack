@@ -9,13 +9,69 @@ class Deck:
 
     def populate(self):
         suits = ["hearts", "diamonds", "clubs","spades"]
-        values = ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"]
+        values = [
+        {
+            "name": "Ace",
+            "value": 11
+        },
+        {
+            "name": "2",
+            "value": 2
+        },
+        {
+            "name": "3",
+            "value": 3
+        },
+        {
+            "name": "4",
+            "value": 4
+        },
+        {
+            "name": "5",
+            "value": 5
+        },
+        {
+            "name": "6",
+            "value": 6
+        },
+        {
+            "name": "7",
+            "value": 7
+        },
+        {
+            "name": "8",
+            "value": 8
+        },
+        {
+            "name": "9",
+            "value": 9
+        },
+        {
+            "name": "10",
+            "value": 10
+        },
+        {
+            "name": "Jack",
+            "value": 10
+        },
+        {
+            "name": "Queen",
+            "value": 10
+        },
+        {
+            "name": "King",
+            "value": 10
+        },
+        ]
 
         for suit in suits:
             for value in values:
-                card = Card(suit, value)
-                self.cards_in_deck.append(card)
 
+                card = Card(suit)
+                card.value["name"] = value["name"]
+                card.value["value"] = value["value"]
+                
+                self.cards_in_deck.append(card)
 
 
     def shuffle(self) :
