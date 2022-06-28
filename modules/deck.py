@@ -1,6 +1,7 @@
 
 from card import *
 from random import *
+from player import *
 
 class Deck:
     def __init__(self):
@@ -84,8 +85,14 @@ class Deck:
         for card in self.cards_in_deck:
             card.print_card()
 
+    def take_one(self):
+        return self.cards_in_deck.pop()
 
+p1 = Player("bob")
 deck = Deck()
 deck.populate()
 deck.shuffle()
 deck.display_deck()
+
+p1.draw(deck)
+p1.show_hand()
