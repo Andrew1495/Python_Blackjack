@@ -9,3 +9,11 @@ class Player:
     def show_hand(self):
         for card in self.hand:
             card.print_card()
+
+    def hand_total(self):
+        sum = 0
+        for card in self.hand:
+            sum += card.card_value()
+        print(sum)
+
+    

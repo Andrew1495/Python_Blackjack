@@ -95,4 +95,6 @@ deck.shuffle()
 deck.display_deck()
 
 p1.draw(deck)
+p1.draw(deck)
 p1.show_hand()
+p1.hand_total()

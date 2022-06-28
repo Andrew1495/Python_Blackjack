@@ -20,3 +20,8 @@ class Card:
         elif self.suit == "diamonds":
             icon = "♦"
             print(f"{self.value['name']}{icon}")
+        
+
+    def card_value(self):
+        return self.value["value"]
+    
