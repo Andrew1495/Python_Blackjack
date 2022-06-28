@@ -1,4 +1,6 @@
 from random import randint
+
+
 class Deck:
     def __init__(self):
         self.cards_in_deck = []
